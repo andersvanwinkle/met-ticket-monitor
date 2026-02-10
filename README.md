@@ -36,10 +36,6 @@ Example (hourly):
 - No secrets are required for the basic monitor.
 - State is stored in a local JSON file (e.g., `state.json`).
 
-## Sample output
-- `No new Met student ticket performances. (count=0)`
-- `New Met Student Tickets: ...`
-
 ## Repo layout
 - `src/` – monitor script(s)
 - `demo/` – sample inputs/outputs
