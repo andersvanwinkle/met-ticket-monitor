@@ -1,21 +1,30 @@
 # Met Ticket Monitor
 
-A small, cron-friendly script to monitor **Met Opera student ticket availability** and alert when new performances appear.
+## What it is
+A small, cron-friendly Python script to monitor **Met Opera student ticket availability** and alert when new performances appear.
 
 This is built to be:
 - **simple** (one script, minimal dependencies)
 - **automatable** (manual run or scheduled)
 - **safe** (no secrets committed; state stored locally)
 
-## What it does
+## How to run (≤ 3 commands)
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python3 src/met_ticket_monitor.py
+```
+
+(Or schedule it via cron; see below.)
+
+## Example output
+- `No new Met student ticket performances. (count=0)`
+- `New Met Student Tickets: ...`
+
+## Notes
 - Fetches the current set of student-ticket performances
 - Compares against a local state file
 - Prints a clear message when new performances are detected
-
-## Run (manual)
-```bash
-python3 src/met_ticket_monitor.py
-```
 
 ## Run (cron)
 Example (hourly):
